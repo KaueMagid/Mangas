@@ -18,5 +18,14 @@ namespace Mangas.Models
 
         [DataType(DataType.Url)]
         public string SiteAdress { get; set; }
+
+        public Company(){}
+
+        public Company(int id, string name, string siteAdress)
+        {
+            Id = id;
+            Name = name;
+            SiteAdress = siteAdress;
+        }
     }
 }

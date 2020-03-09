@@ -16,6 +16,18 @@ namespace Mangas.Models
         public List<Volume> Volumes { get; set; } = new List<Volume>();
         public ColectionStatus ColectionStatus { get; set; }
 
+        public Title(){}
+
+        public Title(int id, string name, int idCompany, Company company,
+            TitleStatus titleStatus, ColectionStatus colectionStatus)
+        {
+            Id = id;
+            Name = name;
+            IdCompany = idCompany;
+            Company = company;
+            TitleStatus = titleStatus;
+            ColectionStatus = colectionStatus;
+        }
 
         public bool GetVolumesStatus()
         {

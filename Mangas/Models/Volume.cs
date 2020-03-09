@@ -13,5 +13,16 @@ namespace Mangas.Models
         public int IdTitle { get; set; }
         public Title Title { get; set; }
         public VolumeStatus VolumeStatus { get; set;}
+
+        public Volume(){}
+
+        public Volume(int id, int number, int idTitle, Title title, VolumeStatus volumeStatus)
+        {
+            Id = id;
+            Number = number;
+            IdTitle = idTitle;
+            Title = title;
+            VolumeStatus = volumeStatus;
+        }
     }
 }
