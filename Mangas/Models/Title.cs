@@ -13,7 +13,7 @@ namespace Mangas.Models
         public int IdCompany { get; set; }
         public Company Company { get; set; }
         public TitleStatus TitleStatus { get; set; }
-        public List<Volume> Volumes { get; set; }
+        public List<Volume> Volumes { get; set; } = new List<Volume>();
         public ColectionStatus ColectionStatus { get; set; }
 
 

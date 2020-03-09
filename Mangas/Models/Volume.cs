@@ -10,11 +10,8 @@ namespace Mangas.Models
     {
         public int Id { get; set; }
         public int Number { get; set; }
-        public List<int> Chapters { get; set; }
-
         public int IdTitle { get; set; }
         public Title Title { get; set; }
-
         public VolumeStatus VolumeStatus { get; set;}
     }
 }

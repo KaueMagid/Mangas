@@ -1,10 +1,11 @@
 ﻿@model IEnumerable<Mangas.Models.Company>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Editoras";
+    ViewData["Companies"] = "Coleções";
 }
 
-<h1>Index</h1>
+<h1>@ViewData["Title"]</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -18,6 +19,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.SiteAdress)
             </th>
+            <th>
+                @ViewData["Companies"]
+            </th>
+
         </tr>
     </thead>
     <tbody>
@@ -28,6 +33,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SiteAdress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titles.Count)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
