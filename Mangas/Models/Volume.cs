@@ -14,15 +14,18 @@ namespace Mangas.Models
         public Title Title { get; set; }
         public VolumeStatus VolumeStatus { get; set;}
 
+        public byte[] Image { get; set; }
+
         public Volume(){}
 
-        public Volume(int id, int number, int idTitle, Title title, VolumeStatus volumeStatus)
+        public Volume(int id, int number, int idTitle, Title title, VolumeStatus volumeStatus, byte[] image)
         {
             Id = id;
             Number = number;
             IdTitle = idTitle;
             Title = title;
             VolumeStatus = volumeStatus;
+            Image = image;
         }
     }
 }

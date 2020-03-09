@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewData["Companies"] = "Editoras";
+    ViewData["Titles"] = "Coleções";
+    ViewData["Volumes"] = "Volumes";
+    ViewData["Privacy"] = "Privacidade";
+    ViewData["About"] = "Sobre";
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -19,19 +26,19 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Companies" asp-action="Index">Editora</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Companies" asp-action="Index">@ViewData["Companies"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Titles" asp-action="Index">Coleções</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Titles" asp-action="Index">@ViewData["Titles"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Volumes" asp-action="Index">Volumes</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Volumes" asp-action="Index">@ViewData["Volumes"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacidade</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">@ViewData["Privacy"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="About">Sobre</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="About">@ViewData["About"]</a>
                         </li>
                     </ul>
                 </div>
