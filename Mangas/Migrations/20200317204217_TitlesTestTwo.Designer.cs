@@ -2,14 +2,16 @@
 using Mangas.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Mangas.Migrations
 {
     [DbContext(typeof(MangasContext))]
-    partial class MangasContextModelSnapshot : ModelSnapshot
+    [Migration("20200317204217_TitlesTestTwo")]
+    partial class TitlesTestTwo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

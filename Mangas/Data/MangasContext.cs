@@ -14,6 +14,8 @@ namespace Mangas.Data
         {
         }
 
-        public DbSet<Mangas.Models.Company> Company { get; set; }
+        public DbSet<Company> Company { get; set; }
+        public DbSet<Title> Title { get; set; }
+        public DbSet<Volume> Volume { get; set; }
     }
 }

@@ -10,22 +10,21 @@ namespace Mangas.Models
     {
         public int Id { get; set; }
         public int Number { get; set; }
-        public int IdTitle { get; set; }
+        public int TitleId { get; set; }
         public Title Title { get; set; }
         public VolumeStatus VolumeStatus { get; set;}
-
-        public byte[] Image { get; set; }
+        public string Image { get; set; }
 
         public Volume(){}
 
-        public Volume(int id, int number, int idTitle, Title title, VolumeStatus volumeStatus, byte[] image)
+        public Volume(int id, int number, int titleId, Title title, VolumeStatus volumeStatus)
         {
             Id = id;
             Number = number;
-            IdTitle = idTitle;
+            TitleId = titleId;
             Title = title;
             VolumeStatus = volumeStatus;
-            Image = image;
+            Image = Title.Name + Number;
         }
     }
 }

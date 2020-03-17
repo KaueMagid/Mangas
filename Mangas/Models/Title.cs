@@ -10,7 +10,7 @@ namespace Mangas.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int IdCompany { get; set; }
+        public int CompanyId { get; set; }
         public Company Company { get; set; }
         public TitleStatus TitleStatus { get; set; }
         public List<Volume> Volumes { get; set; } = new List<Volume>();
@@ -18,12 +18,12 @@ namespace Mangas.Models
 
         public Title(){}
 
-        public Title(int id, string name, int idCompany, Company company,
+        public Title(int id, string name, int companyId, Company company,
             TitleStatus titleStatus, ColectionStatus colectionStatus)
         {
             Id = id;
             Name = name;
-            IdCompany = idCompany;
+            CompanyId = companyId;
             Company = company;
             TitleStatus = titleStatus;
             ColectionStatus = colectionStatus;
@@ -52,6 +52,11 @@ namespace Mangas.Models
             {
                 ColectionStatus = ColectionStatus.updated;
             }
+        }
+
+        public double GetPorcentageOfTitles()
+        {
+            return Volumes.Where(x => x.VolumeStatus == VolumeStatus.possess).Count() / Volumes.Count();
         }
     }
 }
